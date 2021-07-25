@@ -1,2 +1,2 @@
 # Ignore data files
-./myData/*
+**/MyData
