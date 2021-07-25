@@ -1,3 +1,4 @@
 # Ignore data files
 MyData/
 .idea/
+assets/*
