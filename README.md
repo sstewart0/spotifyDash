@@ -43,13 +43,6 @@ user@host spotifyDash % ls
 README.md		app.py			dashboard.py
 analysis.py		assets			spotify_dash.png
 
-user@host spotifyDash % pip install dash 
-user@host spotifyDash % pip install pillow 
-user@host spotifyDash % pip install beautifulsoup4 
-user@host spotifyDash % pip install requests 
-user@host spotifyDash % pip install pandas 
-user@host spotifyDash % pip install regex 
-user@host spotifyDash % pip install numpy 
-user@host spotifyDash % pip install plotly
+user@host spotifyDash % pip install dash pillow beautifulsoup4 requests pandas regex numpy plotly
 ```
 ![Image of Dashboard](spotify_dash.png)
