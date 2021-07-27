@@ -37,6 +37,8 @@ This project creates a dashboard displaying your spotify listening habits over t
 
 ## EXAMPLE USAGE
 ```
+user@host Documents % git clone https://github.com/sstewart0/spotifyDash
+user@host Documents % cd spotifyDash
 user@host spotifyDash % ls
 README.md		app.py			dashboard.py
 analysis.py		assets			spotify_dash.png
@@ -49,6 +51,5 @@ user@host spotifyDash % pip install pandas
 user@host spotifyDash % pip install regex 
 user@host spotifyDash % pip install numpy 
 user@host spotifyDash % pip install plotly
-
 ```
 ![Image of Dashboard](spotify_dash.png)
