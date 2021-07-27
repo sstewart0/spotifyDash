@@ -1,5 +1,6 @@
 # Ignore data files
+__pycache__/
 MyData/
 .idea/
-assets/*
+**/*.csv
 **/.DS_Store

@@ -33,6 +33,9 @@ import pickle
 def get_data(path_to_json = './MyData/'):
     json_files = [sh for sh in os.listdir(path_to_json) if sh.startswith('StreamingHistory')]
 
+    if len(json_files) == 0:
+        return None
+
     streaming_history = pd.DataFrame(columns=['endTime', 'artistName', 'trackName', 'msPlayed'])
 
     for js in json_files:
