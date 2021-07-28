@@ -13,7 +13,6 @@ import os
 # Data
 import pandas as pd
 import datetime
-import json
 
 # Strings
 import re
@@ -22,12 +21,7 @@ import re
 import numpy as np
 
 # Plotting
-import matplotlib.pyplot as plt
 import plotly.express as px
-import plotly.graph_objects as go
-
-# Saving data
-import pickle
 
 # Read streaming history(sh) json files into a pandas dataframe
 def get_data(path_to_json = './MyData/'):

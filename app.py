@@ -3,13 +3,12 @@ from tkinter import *
 from tkinter import filedialog
 # Spotify functions
 import analysis as sf
-import dashboard as db
 
 # Gui to get path to spotify data directory
 def get_directory():
     root = Tk()
     root.withdraw()
-    path = filedialog.askdirectory()
+    path = filedialog.askdirectory(title="Choose path to spotify data folder")
     return path
 
 def main():
@@ -43,8 +42,6 @@ def main():
     else:
         return None
 
-    # Run the dashboard
-    db.run()
-
 if __name__ == "__main__":
     main()
+    exec(open('dashboard.py').read())

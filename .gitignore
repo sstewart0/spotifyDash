@@ -3,4 +3,6 @@ __pycache__/
 MyData/
 .idea/
 **/*.csv
+**/artist*
+**/artwork*
 **/.DS_Store
