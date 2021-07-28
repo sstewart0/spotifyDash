@@ -44,5 +44,8 @@ README.md		app.py			dashboard.py
 analysis.py		assets			spotify_dash.png
 
 user@host spotifyDash % pip install dash pillow beautifulsoup4 requests pandas regex numpy plotly
+user@host spotifyDash % python3 app.py
 ```
+![Image of ChoosePath](choosePath.png)
+
 ![Image of Dashboard](spotify_dash.png)
