@@ -42,10 +42,23 @@ user@host Documents % cd spotifyDash
 user@host spotifyDash % ls
 README.md		app.py			dashboard.py
 analysis.py		assets			spotify_dash.png
-
 user@host spotifyDash % pip install dash pillow beautifulsoup4 requests pandas regex numpy plotly
 user@host spotifyDash % python3 app.py
 ```
 ![Image of ChoosePath](choosePath.png)
+```
+|---Saving Stream Data------|
+|---Saving Top Songs--------|
+|---Saving Song Artwork-----|
+|---Saving Top Artists------|
+|---Saving Artist Artwork---|
+Dash is running on http://127.0.0.1:8050/
 
+ * Serving Flask app "dashboard" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+```
+(Open http://127.0.0.1:8050/ in your browser).
 ![Image of Dashboard](spotify_dash.png)
