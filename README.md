@@ -33,7 +33,8 @@ This project creates a dashboard displaying your spotify listening habits over t
 ### 3. Generate dashboard
 - From terminal run `python3 app.py`.
 - Select the path to the unzipped `MyData` directory.
-- Sit back and wait!
+- Wait for data to be written to disk.
+- From terminal run `python3 dashboard.py`.
 
 ## EXAMPLE USAGE
 ```
@@ -52,6 +53,7 @@ user@host spotifyDash % python3 app.py
 |---Saving Song Artwork-----|
 |---Saving Top Artists------|
 |---Saving Artist Artwork---|
+user@host spotifyDash % python3 dashboard.py
 Dash is running on http://127.0.0.1:8050/
 
  * Serving Flask app "dashboard" (lazy loading)
