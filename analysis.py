@@ -44,8 +44,14 @@ def get_data(path_to_json = './MyData/'):
 def ms_to_time(data):
     return data.apply(lambda x: datetime.timedelta(milliseconds=x))
 
+def reformat_time(x):
+    if str(x)[0] == '0':
+        return str(x)[7:9] + " hours " + str(x)[10:12] + " mins"
+    else:
+        return str(x)[0:7] + str(x)[7:9] + " hours " + str(x)[10:12] + " mins"
+
 def time_to_string(data):
-    return data.apply(lambda x: str(x)[7:9]+" hours "+str(x)[10:12]+" mins")
+    return data.apply(lambda x: reformat_time(x))
 
 
 def get_top_songs(data):
@@ -71,7 +77,7 @@ def get_top_artists(data):
         )
     ).reset_index()
     df.columns = ['artist', 'time_played']
-    df = df.sort_values('time_played', ascending=False).head(5)
+    df = df.sort_values('time_played', ascending=False)
     df['time_played'] = ms_to_time(df['time_played'])
     df['time_played'] = time_to_string(df['time_played'])
     return df
@@ -262,39 +268,9 @@ def plot_day_data(data):
     return fig
 
 def main():
-
-    stream_data = get_data()
-    save_data(stream_data, "./assets/stream_data.csv")
-    #top_songs = get_top_songs(stream_data)
-    """
-    save_data(top_songs, "./assets/top_songs.csv")
-    # save top song artwork
-    num = 0
-    for index, row in top_songs.head(10).iterrows():
-        img = get_genius_image(row)
-        fp = './assets/artwork{i}.png'.format(i=num)
-        save_image(img, fp)
-        num += 1"""
-    #top_artists = get_top_artists(stream_data)
-    """num = 0
-    for index, row in top_artists.iterrows():
-        img = get_artist_picture(row[0])
-        fp = './assets/artist{i}.png'.format(i=num)
-        save_image(img, fp)
-        num += 1"""
-    """genres = {}
-    for index, row in top_songs.head(1000).iterrows():
-        genre = get_song_genre(row)
-        print(genre)
-        if genre is not None:
-            if genre in genres:
-                genres[genre] += 1
-            else:
-                genres[genre] = 1
-
-    genre_data = pd.DataFrame.from_dict(genres)
-    save_data(genre_data, "./assets/genre_data.csv")"""
-    #save_data(top_artists, "./assets/top_artists.csv")
+    # Test top artists
+    streaming_history = pd.read_csv('assets/stream_data.csv')
+    print(get_top_artists(streaming_history).head(20))
 
 
 
